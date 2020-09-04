@@ -43,4 +43,49 @@ class Login extends MY_Controller {
 				// $this->load_wordpress_page('index',$data);
 		}
 	}
+
+	public function signup(){
+		$this->load->view('register');
+	}
+
+	public function addUser(){
+		$firstname= $this->input->post('firstname');
+		$lastname= $this->input->post('lastname');
+		$address= $this->input->post('address');
+		$email= $this->input->post('email');
+		$password = $this->input->post('password');
+
+		$this->form_validation->set_rules('firstname','Firstname','required');
+		$this->form_validation->set_rules('lastname','Lastname','required');
+		$this->form_validation->set_rules('address','Address','required');
+		$this->form_validation->set_rules('email','Email Address','required|is_unique[cfmk_users.email]');
+		$this->form_validation->set_rules('password','Password','required');
+
+		// $parameters['where'] = array('email' => $email);
+		// $parameters['select'] = 'email';
+		// $username_exitst = $this->MY_Model->getRows('cfmk_users',$parameters);
+
+		if($this->form_validation->run() == false){
+			$this->load->view('register');
+			// $this->load_wordpress_page('index');
+		}else{
+			$data = array(
+				'email' => $email,
+				'password'	=> password_hash($this->input->post('password'), PASSWORD_DEFAULT),
+			);
+			$insert_users = $this->MY_Model->insert('cfmk_users',$data);
+
+			if($insert_users){
+
+			$data2 = array(
+				'fk_userid' => $insert_users,
+				'firstname' => $firstname,
+				'lastname' => $lastname,
+				'address' => $address,
+			);
+			$insert_user_details = $this->MY_Model->insert('cfmk_users_details',$data2);
+			}
+			redirect(base_url());
+		}
+	}
 }

@@ -52,6 +52,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'home';
 $route['my-campaigns'] = 'member';
 $route['sign-in'] = 'login';
+$route['sign-up'] = 'login/signup';
+$route['register'] = 'login/addUser';
 $route['auth'] = 'login/auth';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
