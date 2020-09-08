@@ -94,12 +94,15 @@
 <script src="<?php echo base_url('assets/static/js/croppie.min.js') ?>"></script>
 <script src="<?php echo base_url('assets/static/js/filestyle.min.js') ?>"></script>
 <script src="<?php echo base_url('assets/static/js/sweetalert2.min.js') ?>"></script>
+<script src="<?php echo base_url('assets/static/js/jquery.dataTables.min.js') ?>"></script>
+<script src="<?php echo base_url('assets/static/js/dataTables.responsive.min.js') ?>"></script>
 <!-- ============================================================== -->
 <!-- Style switcher -->
 <!-- ============================================================== -->
 <script src="<?php echo base_url('assets/static/js/jQuery.style.switcher.js') ?>"></script>
 <!-- Jquery Plugin Here -->
 <script src="<?php echo base_url('assets/profile/profile.js') ?>"></script>
+<script src="<?php echo base_url('assets/member/member.js') ?>"></script>
 <?php
    load_assets($_assets_, 'js')
 ?>

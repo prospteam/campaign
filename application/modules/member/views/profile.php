@@ -66,7 +66,7 @@
                                     <div class="col-md-12 col-sm-6 col-xs-12">
                                         <label for="first_name">Email Address</label>
                                         <div class="input-group">
-                                            <input type="email" class="form-control" name="email" value="<?php echo $profile_user->email ?>" placeholder="Eamil Address">
+                                            <input type="email" readonly class="form-control" name="email" value="<?php echo $profile_user->email ?>" placeholder="Eamil Address">
                                         </div>
                                         <span class="err"></span>
                                     </div>

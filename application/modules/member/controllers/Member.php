@@ -13,6 +13,29 @@ class Member extends MY_Controller {
 		 $this->load_page('profile', $datas);
 	}
 
+	public function display_member(){
+		$limit = $this->input->post('length');
+		$offset = $this->input->post('start');
+		$search = $this->input->post('search');
+		$order = $this->input->post('order');
+		$draw = $this->input->post('draw');
+		$column_order = array('details.firstname','details.lastname','user.email','details.address','details.image','details.date');
+		$join = array('cfmk_users_details as details' => 'details.fk_userid = user.userid');
+		$select = "*";
+		$where = array('user.user_type' => 1,'user.status !=' =>2);
+		$list = $this->MY_Model->get_datatables('cfmk_users as user',$column_order, $select, $where, $join, $limit, $offset ,$search, $order);
+		$output = array(
+			"draw" => $draw,
+			"recordsTotal" => $list['count_all'],
+			"recordsFiltered" => $list['count'],
+			"data" => $list['data'],
+		);
+		// echo "<pre>";
+		// print_r($list);
+		//  exit;
+		echo json_encode($output);
+	}
+
 	public function get_myprofile(){
 		$parameters['join'] = array(
 			'cfmk_users_details' => 'cfmk_users_details.fk_userid = cfmk_users.userid',

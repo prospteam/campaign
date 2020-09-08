@@ -20,6 +20,7 @@
     <link href="<?php echo base_url('assets/static/css/croppie.min.css') ?>" rel="stylesheet">
     <!-- page css -->
     <link href="<?php echo base_url('assets/static/css/user-card.css') ?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/static/css/jquery.dataTables.min.css') ?>" rel="stylesheet">
     <!-- You can change the theme colors from here -->
     <link href="<?php echo base_url('assets/static/css/default.css') ?>" id="theme" rel="stylesheet">
     <link href="<?php echo base_url('assets/static/css/login-register-lock.css') ?>" id="theme" rel="stylesheet">
