@@ -17,6 +17,7 @@
     <link href="<?php echo base_url('assets/static/css/magnific-popup.css') ?>" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="<?php echo base_url('assets/static/css/style.css') ?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/static/css/croppie.min.css') ?>" rel="stylesheet">
     <!-- page css -->
     <link href="<?php echo base_url('assets/static/css/user-card.css') ?>" rel="stylesheet">
     <!-- You can change the theme colors from here -->

@@ -271,11 +271,11 @@
                                         <div class="u-img"><img src="<?php echo base_url() ?>/assets/static/images/users/1.jpg" alt="user"></div>
                                         <div class="u-text">
                                             <h4>Steave Jobs</h4>
-                                            <p class="text-muted">varun@gmail.com</p><a href="pages-profile.html" class="btn btn-rounded btn-danger btn-sm">View Profile</a></div>
+                                            <p class="text-muted">varun@gmail.com</p></div>
                                     </div>
                                 </li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#"><i class="ti-user"></i> My Profile</a></li>
+                                <li><a href="<?php echo base_url('my-profile') ?>"><i class="ti-user"></i> My Profile</a></li>
                                 <li><a href="#"><i class="ti-wallet"></i> My Balance</a></li>
                                 <li><a href="#"><i class="ti-email"></i> Inbox</a></li>
                                 <li role="separator" class="divider"></li>

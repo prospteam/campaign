@@ -72,6 +72,7 @@
 <!-- ============================================================== -->
 <!-- All Jquery -->
 <!-- ============================================================== -->
+<input type="hidden" name="base_url" value="<?php echo base_url()?>">
 <script src="<?php echo base_url('assets/static/jquery/jquery.min.js') ?>"></script>
 <!-- Bootstrap tether Core JavaScript -->
 <script src="<?php echo base_url('assets/static/bootstrap/js/popper.min.js') ?>"></script>
@@ -90,10 +91,14 @@
 <!-- Magnific popup JavaScript -->
 <script src="<?php echo base_url('assets/static/js/jquery.magnific-popup.min.js') ?>"></script>
 <script src="<?php echo base_url('assets/static/js/jquery.magnific-popup-init.js') ?>"></script>
+<script src="<?php echo base_url('assets/static/js/croppie.min.js') ?>"></script>
+<script src="<?php echo base_url('assets/static/js/filestyle.min.js') ?>"></script>
 <!-- ============================================================== -->
 <!-- Style switcher -->
 <!-- ============================================================== -->
 <script src="<?php echo base_url('assets/static/js/jQuery.style.switcher.js') ?>"></script>
+<!-- Jquery Plugin Here -->
+<script src="<?php echo base_url('assets/profile/profile.js') ?>"></script>
 <?php
    load_assets($_assets_, 'js')
 ?>
