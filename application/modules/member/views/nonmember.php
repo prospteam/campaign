@@ -17,4 +17,21 @@
 <!-- Start Page Content -->
 <!-- ============================================================== -->
 
+    <table class="table table-striped non_member">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email Address</th>
+                <th>Address</th>
+                <th>Date Registered</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+</table>
+
 </div>

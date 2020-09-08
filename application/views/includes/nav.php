@@ -301,8 +301,8 @@
                 <ul id="sidebarnav">
                     <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="icon-User"></i><span class="hide-menu">Users <span class="label label-rounded label-danger">2</span></span></a>
                         <ul aria-expanded="false" class="collapse">
-                            <li><a href="#">Member </a></li>
-                            <li><a href="#">Non Member</a></li>
+                            <li><a href="<?php echo base_url('member') ?>">Member </a></li>
+                            <li><a href="<?php echo base_url('member/non_member') ?>">Non Member</a></li>
                         </ul>
                     </li>
                     <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="icon-Car-Wheel"></i><span class="hide-menu">My Campaigns <span class="label label-rounded label-danger">4</span></span></a>

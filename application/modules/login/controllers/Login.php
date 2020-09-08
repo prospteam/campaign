@@ -72,7 +72,7 @@ class Login extends MY_Controller {
 			$data = array(
 				'email' => $email,
 				'password'	=> password_hash($this->input->post('password'), PASSWORD_DEFAULT),
-				'user_type' => '2',
+				'user_type' => '3',
 				'status' => '1',
 			);
 			$insert_users = $this->MY_Model->insert('cfmk_users',$data);

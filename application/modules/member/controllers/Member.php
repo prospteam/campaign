@@ -6,6 +6,10 @@ class Member extends MY_Controller {
 		$this->load_page('index');
 	}
 
+	public function non_member(){
+		$this->load_page('nonmember');
+	}
+
 	public function my_profile(){
 		$datas = array(
 				'profile_user' => $this->get_myprofile(),
@@ -22,7 +26,7 @@ class Member extends MY_Controller {
 		$column_order = array('details.firstname','details.lastname','user.email','details.address','details.image','details.date');
 		$join = array('cfmk_users_details as details' => 'details.fk_userid = user.userid');
 		$select = "*";
-		$where = array('user.user_type' => 1,'user.status !=' =>2);
+		$where = array('user.user_type' => 2,'user.status !=' =>2);
 		$list = $this->MY_Model->get_datatables('cfmk_users as user',$column_order, $select, $where, $join, $limit, $offset ,$search, $order);
 		$output = array(
 			"draw" => $draw,
@@ -34,6 +38,42 @@ class Member extends MY_Controller {
 		// print_r($list);
 		//  exit;
 		echo json_encode($output);
+	}
+
+	public function display_nonmember(){
+		$limit = $this->input->post('length');
+		$offset = $this->input->post('start');
+		$search = $this->input->post('search');
+		$order = $this->input->post('order');
+		$draw = $this->input->post('draw');
+		$column_order = array('details.firstname','details.lastname','user.email','details.address','details.image','details.date');
+		$join = array('cfmk_users_details as details' => 'details.fk_userid = user.userid');
+		$select = "*";
+		$where = array('user.user_type' => 3,'user.status !=' =>2);
+		$list = $this->MY_Model->get_datatables('cfmk_users as user',$column_order, $select, $where, $join, $limit, $offset ,$search, $order);
+		$output = array(
+			"draw" => $draw,
+			"recordsTotal" => $list['count_all'],
+			"recordsFiltered" => $list['count'],
+			"data" => $list['data'],
+		);
+		echo json_encode($output);
+	}
+
+	public function member_status(){
+		$id     = $_POST['userid'];
+		$status = $_POST['status'];
+		$fstatus = ($status == 1?0:1);
+		$data = array(
+			'set' => array('status' => $fstatus),
+			'where' => array('userid' => $id)
+		);
+		$query = $this->MY_Model->update('cfmk_users',$data['set'],$data['where']);
+		if ($query) {
+			response('success', 'success', 'Successfully updated user');
+		} else {
+			response('error', 'danger', 'Something went wrong');
+		}
 	}
 
 	public function get_myprofile(){
