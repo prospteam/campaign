@@ -78,25 +78,17 @@ class Member extends MY_Controller {
 
 				$query = $this->MY_Model->update('cfmk_users_details', $user_details, array('fk_userid' => $user_id));
 				if ($query) {
-					$pass = array(
-						'where' =>array('userid' => $user_id),
-					);
-					if (!empty($password)) {
-						$pass['set']['password'] 	   = password_hash($password,PASSWORD_DEFAULT);
-					}
-					$res = $this->MY_Model->update('cfmk_users', $pass['set'], $pass['where']);
-					if ($res) {
-						$respond['response']	= 'success';
-						$respond['type'] 		= 'success';
-						$respond['msg'] 		= 'Successfully updated profile details';
-					}
-				} else {
+					$respond['response']	= 'success';
+					$respond['type'] 		= 'success';
+					$respond['msg'] 		= 'Successfully updated profile details';
+				}else {
 					$respond['response']	= 'error';
 					$respond['type'] 		= 'warning';
 					$respond['msg'] 		= 'Something went wrong';
 				}
+				json($respond);
 		}
-		json($respond);
+
 	}
 
 }

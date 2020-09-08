@@ -72,6 +72,8 @@ class Login extends MY_Controller {
 			$data = array(
 				'email' => $email,
 				'password'	=> password_hash($this->input->post('password'), PASSWORD_DEFAULT),
+				'user_type' => '2',
+				'status' => '1',
 			);
 			$insert_users = $this->MY_Model->insert('cfmk_users',$data);
 
@@ -85,7 +87,12 @@ class Login extends MY_Controller {
 			);
 			$insert_user_details = $this->MY_Model->insert('cfmk_users_details',$data2);
 			}
-			redirect(base_url());
+			if ($insert_user_details) {
+				$respond['response']	= 'success';
+				$respond['type'] 		= 'success';
+				$respond['msg'] 		= 'Successfully Registered';
+			}
+			json($respond);
 		}
 	}
 }

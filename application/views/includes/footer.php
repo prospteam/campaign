@@ -93,6 +93,7 @@
 <script src="<?php echo base_url('assets/static/js/jquery.magnific-popup-init.js') ?>"></script>
 <script src="<?php echo base_url('assets/static/js/croppie.min.js') ?>"></script>
 <script src="<?php echo base_url('assets/static/js/filestyle.min.js') ?>"></script>
+<script src="<?php echo base_url('assets/static/js/sweetalert2.min.js') ?>"></script>
 <!-- ============================================================== -->
 <!-- Style switcher -->
 <!-- ============================================================== -->

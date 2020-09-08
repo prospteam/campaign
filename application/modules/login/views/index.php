@@ -100,6 +100,7 @@
 <!-- Bootstrap tether Core JavaScript -->
 <script src="<?php echo base_url('assets/static/bootstrap/js/popper.min.js') ?>"></script>
 <script src="<?php echo base_url('assets/static/bootstrap/js/bootstrap.min.js') ?>"></script>
+<script src="<?php echo base_url('assets/login/js/login.js') ?>"></script>
 <script type="text/javascript">
     $(function() {
         $(".preloader").fadeOut();

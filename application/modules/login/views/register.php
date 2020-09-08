@@ -32,7 +32,7 @@
 <section id="wrapper" class="login-register login-sidebar" style="background-image:url(<?php echo base_url(); ?>/assets/static/images/background/login-register.jpg);">
     <div class="login-box card">
         <div class="card-body">
-            <form class="form-horizontal form-material" id="signupForm" action="<?php echo base_url('register'); ?>" method="post">
+            <form class="form-horizontal form-material" id="signupForm" action="" method="post">
                 <a href="javascript:void(0)" class="text-center db"><img style="max-width: 80px;" src="<?php echo base_url(); ?>/assets/static/images/favicon.png" alt="Home" /><br/><img src="<?php echo base_url(); ?>/assets/static/images/logo-text.png" alt="Home" /></a>
                 <div class="form-group">
                     <?php if(isset($msg)): ?>
@@ -98,10 +98,13 @@
         </div>
     </div>
 </section>
+<input type="hidden" name="base_url" value="<?php echo base_url()?>">
 <script src="<?php echo base_url('assets/static/jquery/jquery.min.js') ?>"></script>
 <!-- Bootstrap tether Core JavaScript -->
 <script src="<?php echo base_url('assets/static/bootstrap/js/popper.min.js') ?>"></script>
 <script src="<?php echo base_url('assets/static/bootstrap/js/bootstrap.min.js') ?>"></script>
+<script src="<?php echo base_url('assets/static/js/sweetalert2.min.js') ?>"></script>
+<script src="<?php echo base_url('assets/login/js/login.js') ?>"></script>
 <script type="text/javascript">
     $(function() {
         $(".preloader").fadeOut();

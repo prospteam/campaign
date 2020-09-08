@@ -100,7 +100,6 @@ $(document).ready(function(){
                     console.log(sendAjaxVar);
                     if (sendAjaxVar) {
                         console.log(sendAjaxVar);
-                        clearError();
                         if (sendAjaxVar.type == "success") {
                             Swal.fire({
                                 text: sendAjaxVar.msg,
@@ -127,46 +126,75 @@ $(document).ready(function(){
     })
 
     function sendAjax(param = {},isReturn = true){
-    if(isReturn === false){
-        var return_response = null;
-        $.ajax({
-            url:param.url,
-            type: 'post',
-            data:param.data,
-            async:false,
-            processData: false,
-            contentType: false,
-            dataType:'json',
-            beforeSend: function() {
-              $('.overlay').show();
-            },
-            success:function(response){
-                $('.overlay').hide();
-                console.log(response);
-                return_response = response;
-            },error:function(e){
-                console.log(e);
-            }
-        });
-        return return_response;
-    } else {
-        var return_data = null;
-        $.ajax({
-            url:param.url,
-            type: 'post',
-            data:param.data,
-            async:false,
-            dataType:'json',
-            success:function(response){
-                return_data = response;
-            },error:function(e){
-                console.log(e);
-            }
-        });
+        if(isReturn === false){
+            var return_response = null;
+            $.ajax({
+                url:param.url,
+                type: 'post',
+                data:param.data,
+                async:false,
+                processData: false,
+                contentType: false,
+                dataType:'json',
+                beforeSend: function() {
+                  $('.overlay').show();
+                },
+                success:function(response){
+                    $('.overlay').hide();
+                    console.log(response);
+                    return_response = response;
+                },error:function(e){
+                    console.log(e);
+                }
+            });
+            return return_response;
+        } else {
+            var return_data = null;
+            $.ajax({
+                url:param.url,
+                type: 'post',
+                data:param.data,
+                async:false,
+                dataType:'json',
+                success:function(response){
+                    return_data = response;
+                },error:function(e){
+                    console.log(e);
+                }
+            });
 
-        if(isReturn){
-            return return_data;
+            if(isReturn){
+                return return_data;
+            }
         }
     }
-}
+
+    function confirm_swal(text,confirmBtnText){
+        var isSuccess = false;
+        return new Promise(function(resolve, reject) {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: text,
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: confirmBtnText
+            }).then((result) => {
+                if (result.value) {
+                    resolve(true);
+                } else {
+                    resolve(false);
+                }
+            });
+       });
+    }
+
+    function swal(content,response = 'success'){
+        if(response == 'success'){
+            Swal.fire("Success",content,response);
+        }else{
+            Swal.fire("Error",content,response);
+        }
+    }
 });
