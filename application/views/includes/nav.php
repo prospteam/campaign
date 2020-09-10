@@ -49,7 +49,9 @@
                     <!-- ============================================================== -->
                     <!-- Search -->
                     <!-- ============================================================== -->
-                    <li class="nav-item hidden-xs-down search-box"> <a class="nav-link hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i class="icon-Magnifi-Glass2"></i></a>
+                    <li class="nav-item hidden-xs-down search-box">
+                         <a class="nav-link hidden-sm-down waves-effect waves-dark" href="javascript:void(0)">
+                             <i class="icon-Magnifi-Glass2"></i></a>
                         <form class="app-search">
                             <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i class="ti-close"></i></a> </form>
                     </li>
@@ -301,16 +303,41 @@
             <!-- Sidebar navigation-->
             <nav class="sidebar-nav">
                 <ul id="sidebarnav">
-                    <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="icon-Car-Wheel"></i><span class="hide-menu">My Campaigns <span class="label label-rounded label-danger">4</span></span></a>
+                    <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class=" fas fa-clipboard-list "></i><span class="hide-menu">My Campaigns <span class="label label-rounded label-danger">4</span></span></a>
                         <ul aria-expanded="false" class="collapse">
                             <li><a href="<?php echo base_url('my-campaigns'); ?>">Active </a></li>
                             <li><a href="#">In-Active</a></li>
                             <li><a href="#">For Approval</a></li>
                         </ul>
                     </li>
-                    <li> <a class=" waves-effect waves-dark" href="#" aria-expanded="false"><i class="icon-Double-Circle"></i><span class="hide-menu">My Donations</span></a></li>
+                    <li> <a class=" waves-effect waves-dark" href="#" aria-expanded="false"><i class=" fas fa-hand-holding-heart "></i><span class="hide-menu">My Donations</span></a></li>
                 </ul>
             </nav>
+            <nav class="sidebar-nav">
+                <ul id="sidebarnav">
+                        <div class="col-md-12 alert alert-info alert-rounded row" style="background:#2486C1;color:#fff">
+                            <div class="col-md-12">
+                                <label for="">Pay the membership fee to avail most of the priviledges on fund raising campaigns.</label>
+                            </div>
+                            <div id="alert" hidden class="col-md-12">
+                                <p class="mb-0" id="alert-content"></p>
+                            </div>
+                            <div class="collumn" >
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="">Choose currency</label>
+                                        <select name=""  id="currencyCodes"  class="form-control currencyCodes"> </select>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <div id="paypal-button-container"></div>
+                                    <!-- <div id="paypal-button-container" hidden></div> -->
+                                </div>
+                            </div>
+                     </div>
+                </ul>
+            </nav>
+
             <!-- End Sidebar navigation -->
         </div>
         <!-- End Sidebar scroll-->

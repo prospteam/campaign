@@ -1,6 +1,21 @@
 <?php
 $isProduction = false;
 $base_url = (isset($_SERVER['HTTPS']) ? 'https' : 'http').'://'.$_SERVER['HTTP_HOST'].'/'.(explode("/",$_SERVER['REQUEST_URI'])[1]).'/';
+
+define('MEMBERSHIP','25');
+define('COMPANY_NAME','COME FUND ME KENYAN');
+$tesmonde 		= true;
+if ($tesmonde) {
+	define('PAYPALID','AaPrAOxKMOYWEDsEmuj5SP4ZK3sCc6qPk3sj0fFo8aIUn6POWZu3p_HRHlrnBrP1M1YT-Ku9C8bszInX');
+	define('TEST_MODE',true);
+	define("PAYPAL_USERNAME", "sp-facilitator_api1.proweaver.net");
+	define("PAYPAL_PASSWORD", "1399873650");
+	define("PAYPAL_SIGNATURE", "AiPC9BjkCyDFQXbSkoZcgqH3hpacA74rJq85b-pTFAHAZ.71hb30iH12");
+	// define('PAYPALID','Aa0S2ymxf9Kw5CzJxtl5AuMX0mYH4Xl8zplqIXXf_iw_CDwW505itVibzvldGCix6Fp3l15WNPGomUXp');
+}else {
+	define('PAYPALID','');
+	define('TEST_MODE',false);
+}
 /**
  * CodeIgniter
  *

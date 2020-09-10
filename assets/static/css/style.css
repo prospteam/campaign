@@ -4795,3 +4795,39 @@ File: scss
     width: 100%; }
     .dataTables_wrapper .dataTables_paginate .paginate_button {
       padding: 0.5rem 0.6rem; } }
+
+
+      .modal-header{
+          background: #00A95A !important;
+          color: #fff !important;
+      }
+      .modal-header h4{
+          color: #fff !important;
+      }
+
+      .card-title {
+    color: #00A95A;
+}
+.campain_photo {
+    max-width: auto;
+    height: 230px !important;
+    object-fit: cover;
+}
+
+.spinner-grow {
+    display: inline-block;
+    vertical-align: text-bottom;
+    background-color: #00A95A;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-animation: spinner-grow .75s linear infinite;
+    animation: spinner-grow .75s linear infinite;
+    width: 20rem;
+    height: auto;
+    width: 10rem !important;
+    height: 10rem !important;
+}
+
+.hide_{
+    display: none!important;
+}

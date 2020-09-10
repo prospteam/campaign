@@ -5,8 +5,5 @@ class Campaigns extends MY_Controller {
 	public function index(){
 		$this->load_page('index');
 	}
-
-
-	
 }
 ?>
