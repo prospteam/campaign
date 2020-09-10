@@ -1,14 +1,24 @@
 <div class="row page-titles">
     <div class="col-md-5 align-self-center">
+<<<<<<< HEAD
         <h3 class="text-themecolor">My Fund Raising Campaigns</h3>
+=======
+        <h3 class="text-themecolor">Member</h3>
+>>>>>>> 0b6bbcc590c52912b853849902a3727fcebba708
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-            <li class="breadcrumb-item active">My Campaigns</li>
+            <li class="breadcrumb-item active">Member</li>
         </ol>
     </div>
+<<<<<<< HEAD
     <div class="col-md-7 align-self-center text-right d-none d-md-block">
         <button type="button" id="toggle_Add" class="btn btn-info"><i class="fa fa-plus-circle"></i> Start new campaign</button>
     </div>
+=======
+    <!-- <div class="col-md-7 align-self-center text-right d-none d-md-block">
+        <button type="button" class="btn btn-info"><i class="fa fa-plus-circle"></i> Create New</button>
+    </div> -->
+>>>>>>> 0b6bbcc590c52912b853849902a3727fcebba708
     <div class="">
         <button   class="right-side-toggle waves-effect waves-light btn-inverse btn btn-circle btn-sm pull-right m-l-10"><i class="ti-settings text-white"></i></button>
     </div>
@@ -19,6 +29,7 @@
 <!-- ============================================================== -->
 <!-- Start Page Content -->
 <!-- ============================================================== -->
+<<<<<<< HEAD
 <div class="col-md-12 center_loader hide_"  style="display: flex;
                                 justify-content: center;">
     <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
@@ -229,3 +240,23 @@
             </div>
             <!-- /.modal-dialog -->
         </div>
+=======
+
+    <table class="table table-striped member">
+        <thead>
+            <tr>
+				<th>Image</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Email Address</th>
+				<th>Address</th>
+                <th>Date Registered</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+>>>>>>> 0b6bbcc590c52912b853849902a3727fcebba708

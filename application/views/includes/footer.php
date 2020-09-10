@@ -72,6 +72,7 @@
 <!-- ============================================================== -->
 <!-- All Jquery -->
 <!-- ============================================================== -->
+<input type="hidden" name="base_url" value="<?php echo base_url()?>">
 <script src="<?php echo base_url('assets/static/jquery/jquery.min.js') ?>"></script>
 <!-- Bootstrap tether Core JavaScript -->
 <script src="<?php echo base_url('assets/static/bootstrap/js/popper.min.js') ?>"></script>
@@ -89,16 +90,32 @@
 <!--Custom JavaScript -->
 <script src="<?php echo base_url('assets/static/js/custom.min.js') ?>"></script>
 <!-- Magnific popup JavaScript -->
+<<<<<<< HEAD
 
 <script src="<?php echo base_url('assets/static/js/validation.js') ?>"></script>
+=======
+<script src="<?php echo base_url('assets/static/js/jquery.magnific-popup.min.js') ?>"></script>
+<script src="<?php echo base_url('assets/static/js/jquery.magnific-popup-init.js') ?>"></script>
+<script src="<?php echo base_url('assets/static/js/croppie.min.js') ?>"></script>
+<script src="<?php echo base_url('assets/static/js/filestyle.min.js') ?>"></script>
+<script src="<?php echo base_url('assets/static/js/sweetalert2.min.js') ?>"></script>
+<script src="<?php echo base_url('assets/static/js/jquery.dataTables.min.js') ?>"></script>
+<script src="<?php echo base_url('assets/static/js/dataTables.responsive.min.js') ?>"></script>
+>>>>>>> 0b6bbcc590c52912b853849902a3727fcebba708
 <!-- ============================================================== -->
 <!-- Style switcher -->
 <!-- ============================================================== -->
 <script src="<?php echo base_url('assets/static/js/jQuery.style.switcher.js') ?>"></script>
+<<<<<<< HEAD
  <!-- <script src="https://www.paypal.com/sdk/js?client-id=<?php //echo PAYPALID; ?>&currency=USD"></script> -->
  <script src="https://www.paypalobjects.com/api/checkout.js"></script>
 <!-- <script src="<?php //echo base_url('assets/static/payment/paypal.js'); ?>"></script> -->
 <script src="<?php echo base_url('assets/static/payment/currency.js'); ?>"></script>
+=======
+<!-- Jquery Plugin Here -->
+<script src="<?php echo base_url('assets/profile/profile.js') ?>"></script>
+<script src="<?php echo base_url('assets/member/member.js') ?>"></script>
+>>>>>>> 0b6bbcc590c52912b853849902a3727fcebba708
 <?php
    load_assets($_assets_, 'js')
 ?>
